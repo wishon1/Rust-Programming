@@ -154,4 +154,3 @@ fn main() {
             break; // Exit the main game loop.
         }
     }
-}
