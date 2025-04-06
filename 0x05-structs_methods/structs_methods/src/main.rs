@@ -1,4 +1,7 @@
 mod rectangle;
+mod point;
+
+use point::Point3d;
 use rectangle::Rectangle;
 
 /// main function to display the rectangle
@@ -23,4 +26,8 @@ fn main() {
     println!("{}", square);
     println!("Area: {}", square.area());
     
+    // task 5
+    let point = Point3d(3.0, 4.0, 5.0);
+    println!("Point: {:?}", point);
+    println!("Distance from origin: {:.2}", point.distance_from_origin());
 }
