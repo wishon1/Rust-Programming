@@ -1,5 +1,5 @@
 // 0x05. Rust - Structs and Methods
-use std::fmt::Debug;
+use std::fmt::{Debug, Display, Formatter, Result};
 
 #[derive(Debug)]
 pub struct Rectangle {
@@ -8,7 +8,7 @@ pub struct Rectangle {
 }
 
 impl Rectangle {
-    
+
         /// function that creats a new rectangle struct
         pub fn new(width: u32, height: u32) -> Rectangle {
             if width == 0 {
@@ -29,4 +29,10 @@ impl Rectangle {
         pub fn can_hold(&self, other: &Rectangle) -> bool {
             self.width >= other.width && self.height >= other.height
         }
+}
+
+impl Display for Rectangle {
+    fn fmt(&self, f: &mut Formatter) -> Result {
+        write!(f, "Rectangle(width: {}, height: {})", self.width, self.height)
+    }
 }
