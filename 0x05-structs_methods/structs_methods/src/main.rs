@@ -6,7 +6,7 @@ use rectangle::Rectangle;
 
 /// main function to display the rectangle
 fn main() {
-    let rect = Rectangle::new(30, 50);
+    let mut rect = Rectangle::new(30, 50);
     println!("rect is {:?}", rect);
     println!("The area of the rectangle is {} square pixels.", rect.area());
 
@@ -30,4 +30,11 @@ fn main() {
     let point = Point3d(3.0, 4.0, 5.0);
     println!("Point: {:?}", point);
     println!("Distance from origin: {:.2}", point.distance_from_origin());
+
+    // task 6
+    println!("Before resize: {}", rect);
+    rect.resize(40, 60);
+    println!("After resize: {}", rect);
+    rect.resize(0, 10);
+    println!("After invalid resize: {}", rect);
 }

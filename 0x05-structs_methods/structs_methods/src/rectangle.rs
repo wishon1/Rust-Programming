@@ -34,6 +34,14 @@ impl Rectangle {
         pub fn square(size: u32) -> Rectangle {
             Rectangle { width: size, height: size}
         }
+
+        ///resize` method should modify the `width` and `height` fields of the Rectangle struct.
+        pub fn resize(&mut self, new_width: u32, new_height: u32) {
+            if new_width > 0 && new_height > 0 {
+                self.width = new_width;
+                self.height = new_height;
+            }
+        }
 }
 
 impl Display for Rectangle {
