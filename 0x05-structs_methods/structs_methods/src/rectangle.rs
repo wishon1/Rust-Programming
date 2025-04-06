@@ -29,6 +29,11 @@ impl Rectangle {
         pub fn can_hold(&self, other: &Rectangle) -> bool {
             self.width >= other.width && self.height >= other.height
         }
+
+        /// FUNCTION square that return the sqare of rectangle
+        pub fn square(size: u32) -> Rectangle {
+            Rectangle { width: size, height: size}
+        }
 }
 
 impl Display for Rectangle {

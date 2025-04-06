@@ -17,5 +17,10 @@ fn main() {
     
     let invalid_rect = Rectangle::new(0, 10);
     println!("Invalid rectangle defaults to: {:?}", invalid_rect);
+
+    // task 4
+    let square = Rectangle::square(25);
+    println!("{}", square);
+    println!("Area: {}", square.area());
     
 }
