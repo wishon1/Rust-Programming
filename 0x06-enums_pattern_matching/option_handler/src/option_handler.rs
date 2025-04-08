@@ -11,7 +11,7 @@
 /// * `Option<usize>` - The index of the first occurrence of the value, or None if not found
 pub fn find_value(numbers: &[i32], value: i32) -> Option<usize> {
     // Iterate through the vector with enumeration to get index and value
-    for (index, &number) in number.iter().enumerate() {
+    for (index, &number) in numbers.iter().enumerate() {
         if number == value {
             return Some(index);
         }
@@ -26,7 +26,7 @@ pub fn find_value(numbers: &[i32], value: i32) -> Option<usize> {
 ///
 /// * `result` - An Option containing the index if found, or None
 /// * `value` - The value that was searched for
-pub fn display_result(result: Option<unsize>, value: i32) {
+pub fn display_result(result: Option<usize>, value: i32) {
     // usematch to handle both Some and None cases
     match result {
         Some(index) => println!("Found value {} at index {}", value, index),
