@@ -1,5 +1,3 @@
-I'll continue with the ALX-style exercises for Rust, focusing on modules, collections, and error handling chapters. Here's the 0x07 chapter about packages, crates, and modules:
-
 # 0x07. Rust - Packages, Crates, and Modules
 
 ## Learning Objectives
@@ -234,3 +232,53 @@ Create a Cargo workspace with multiple crates:
 - GitHub repository: `alx-rust_programming`
 - Directory: `0x07-modules_packages/workspace`
 - File: `Cargo.toml, common_utils/src/lib.rs, front_end/src/lib.rs, back_end/src/lib.rs, app/src/main.rs`
+
+***Provide directory should be structured in this manner:
+```
+alx-rust_programming/
+├── 0x07-modules_packages/
+│   ├── src/
+│   │   ├── lib.rs                  # Task 0 & Task 1 library crate
+│   │   ├── main.rs                 # Main file for various tasks
+│   │   ├── front_of_house.rs       # Task 1 front_of_house module
+│   │   ├── front_of_house/
+│   │   │   ├── hosting.rs          # Task 1 hosting module
+│   │   │   └── serving.rs          # Task 1 serving module
+│   │   ├── privacy_demo.rs         # Task 4 privacy demo
+│   │   ├── custom_imports.rs       # Task 5 custom imports
+│   │   ├── nested_modules.rs       # Task 6 nested modules
+│   │   ├── api.rs                  # Task 7 re-exporting
+│   │   └── internal_modules.rs     # Task 7 internal modules
+│   ├── Cargo.toml                  # Project manifest
+│   │
+│   ├── calculator/                 # Task 2 & Task 3 calculator crate
+│   │   ├── src/
+│   │   │   ├── lib.rs              # Calculator library
+│   │   │   ├── main.rs             # Calculator main
+│   │   │   ├── basic_ops.rs        # Basic operations
+│   │   │   ├── advanced_ops.rs     # Advanced operations
+│   │   │   ├── utils.rs            # Utility functions
+│   │   │   └── shortcuts.rs        # Task 3 shortcuts
+│   │   └── Cargo.toml              # Calculator manifest
+│   │
+│   └── workspace/                  # Task 8 workspace
+│       ├── Cargo.toml              # Workspace manifest
+│       ├── common_utils/
+│       │   ├── src/
+│       │   │   └── lib.rs          # Common utilities library
+│       │   └── Cargo.toml          # Common utilities manifest
+│       ├── front_end/
+│       │   ├── src/
+│       │   │   └── lib.rs          # Front-end library
+│       │   └── Cargo.toml          # Front-end manifest
+│       ├── back_end/
+│       │   ├── src/
+│       │   │   └── lib.rs          # Back-end library
+│       │   └── Cargo.toml          # Back-end manifest
+│       └── app/
+│           ├── src/
+│           │   └── main.rs         # Application main
+│           └── Cargo.toml          # Application manifest
+```
+heres instruction to do it: 
+```
