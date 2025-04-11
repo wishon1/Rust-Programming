@@ -2,6 +2,8 @@
 mod privacy_demo;
 mod custom_imports;
 mod nested_modules;
+mod internal_modules;
+mod api;
 
 // Import functions with custom names using `as`
 use custom_imports::custom_imports::math::add;
@@ -76,4 +78,21 @@ fn main() {
     // Access deeply nested function with full path
     println!("- Full path: {}", 
              nested_modules::nested_modules::level1::level2::level3::function3());
+
+     // Task 7: Testing re-exported functions
+     println!();
+     println!("TASK 7:");
+     println!();
+     
+     // Using re-exported functions
+     println!("Email validation: {}", api::api::validate_email("user@example.com"));
+     println!("{}", api::api::create_user("johndoe", "john@example.com"));
+     println!("{}", api::api::login("johndoe", "password123"));
+     println!("{}", api::api::logout("johndoe"));
+     
+     // Using the flattened API
+     println!("\nUsing flattened API:");
+     println!("Password validation: {}", api::api::user::validate_password("password123"));
+     println!("{}", api::api::user::create_user("janedoe", "jane@example.com"));
+     println!("{}", api::api::user::delete_user("janedoe"));
 }
