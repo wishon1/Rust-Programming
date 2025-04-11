@@ -1,12 +1,20 @@
 // src/main.rs
 mod privacy_demo;
 mod custom_imports;
+mod nested_modules;
 
 // Import functions with custom names using `as`
 use custom_imports::custom_imports::math::add;
 use custom_imports::custom_imports::geometry::area as geometry_area;
 use custom_imports::custom_imports::utils::format as format_number;
 use custom_imports::custom_imports::utils::helper::absolute;
+
+// Using absolute path to import access_all_levels
+use nested_modules::nested_modules::access_all_levels;
+
+// Using absolute path with specific imports
+use nested_modules::nested_modules::level1;
+use nested_modules::nested_modules::level1::level2::level3::level4;
 
 use restaurant;
 
@@ -52,4 +60,20 @@ fn main() {
     // Using the demonstration function
     println!("\nDemonstration of various import techniques:");
     custom_imports::custom_imports::demo::demonstrate();
+
+
+    println!("Nested Modules Example\n");
+
+    // Demonstrate accessing all levels from the utility function
+    access_all_levels();
+    
+    println!("\nDirect access from main:");
+    
+    // Access modules directly from main with specific imports
+    println!("- Level 1 direct: {}", level1::function1());
+    println!("- Level 4 direct: {}", level4::function4());
+    
+    // Access deeply nested function with full path
+    println!("- Full path: {}", 
+             nested_modules::nested_modules::level1::level2::level3::function3());
 }

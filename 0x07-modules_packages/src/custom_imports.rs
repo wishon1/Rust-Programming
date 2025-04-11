@@ -51,18 +51,18 @@ pub mod custom_imports {
     
     // Module using different path techniques
     pub mod demo {
-        // Change these lines:
-        use super::math::area as math_area;
-        use super::geometry::area as geom_area;
-        
-        // Using self to reference the current module
-        use self::internal::helper as self_helper;
-        
-        // Using super to reference the parent module
-        use super::utils::helper::is_positive;
-        
-        // Change this line:
-        use super::utils::format;
+       // Change these lines:
+    use super::math::area as math_area;
+    use super::geometry::area as geom_area;
+    
+    // Using self to reference the current module
+    use self::internal::helper as self_helper;
+    
+    // Using super to reference the parent module
+    use super::utils::helper::is_positive;
+    
+    // Change this line:
+    use super::utils::format;
         
         mod internal {
             pub mod helper {
