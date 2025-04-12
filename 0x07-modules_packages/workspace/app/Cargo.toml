@@ -1,0 +1,9 @@
+[package]
+name = "app"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+common_utils = { path = "../common_utils" }
+front_end = { path = "../front_end" }
+back_end = { path = "../back_end" }
