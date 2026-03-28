@@ -1,37 +1,37 @@
-// 0x07. Rust - Packages, Crates, and Modules
+// Module containing basic arithmetic operations
 
-// Adds two numbers
+/// Adds two numbers together
 /// # Arguments
-///     * `a` - First number
-///     * `b` - Second number
+///     * `a` - The first operand
+///     * `b` - The second operand
 /// # Returns - * `f64` - The sum of a and b
 pub fn add(a: f64, b: f64) -> f64 {
     a + b
 }
 
-// Subtracts the second number from the first
+/// Subtracts b from a
 /// # Arguments
-///     * `a` - First number
-///     * `b` - Second number
-/// # Returns - * `f64` - The result of a - b
+///     * `a` - The first operand
+///     * `b` - The second operand
+/// # Returns - * `f64` - The difference of a and b
 pub fn subtract(a: f64, b: f64) -> f64 {
     a - b
 }
 
-/// Multiplies two numbers
+/// Multiplies two numbers together
 /// # Arguments
-///     * `a` - First number
-///     * `b` - Second number
+///     * `a` - The first operand
+///     * `b` - The second operand
 /// # Returns - * `f64` - The product of a and b
 pub fn multiply(a: f64, b: f64) -> f64 {
     a * b
 }
 
-/// Divides the first number by the second
+/// Divides a by b
 /// # Arguments
-///     * `a` - First number
-///     * `b` - Second number
-/// # Returns - * `Result<f64, String>` - The result of a / b or an error if b is zero
+///     * `a` - The dividend
+///     * `b` - The divisor
+/// # Returns - * `Result<f64, String>` - The quotient, or an error if b is zero
 pub fn divide(a: f64, b: f64) -> Result<f64, String> {
     if b == 0.0 {
         Err("Cannot divide by zero".to_string())
